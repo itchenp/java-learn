@@ -11,5 +11,5 @@
 
     <artifactId>java-source-learn</artifactId>
 
-
+    <description>java 源码，类知识学习</description>
 </project>
