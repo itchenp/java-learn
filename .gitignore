@@ -1,4 +1,6 @@
 HELP.md
+### 模板参考git地址：https://github.com/github/gitignore.git
+
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
