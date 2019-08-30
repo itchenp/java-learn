@@ -10,6 +10,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>tool</artifactId>
-
+    <description>编程相关工具学习</description>
 
 </project>
