@@ -8,3 +8,10 @@
 mvn clean -Dmaven.test.skip=true
 ###### 指定编译环境
 mvn clean -P local [^_^]: # (注意. springboot 项目不需要这里指定)
+###### 指定模块编译
+mvn dependency:analyze -pl "service/[模块名]" -Plocal
+###### 编译排除指定模块
+mvn -pl "!service/[模块名]" install -Dmaven.test.skip=true -Plocal
+###### 上传包到本地服务器
+mvn install:install-file -Dfile=[本地包路径] -DgroupId=com.jfpal -DartifactId=agent-base -Dversion=1.0.0 -Dpackaging=jar
+
