@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>think-in-java</artifactId>
+    <artifactId>spring-source-learn</artifactId>
 
-
-    <description>think in java study</description>
+    <description>spring 源码，类知识学习</description>
 </project>

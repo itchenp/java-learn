@@ -6,7 +6,7 @@
     <modules>
         <module>java-source-learn</module>
         <module>tool</module>
-        <module>think-in-java</module>
+        <module>spring-source-learn</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
