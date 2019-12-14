@@ -1,0 +1,49 @@
+请解释关系型数据库概念及主要特点？
+请说出关系型数据库的典型产品、特点及应用场景？
+请详细描述 SQL 语句分类及对应代表性关键字。
+什么是 MySQL 多实例，如何配置 MySQL 多实例？
+如何加强 MySQL 安全，请给出可行的具体措施？
+误操作执行了一个 drop 库 SQL 语句，如何完整恢复？
+详述 MySQL 主从复制原理及配置主从的完整步骤。
+MySQL 如何实现双向互为主从复制，并说明应用场景？
+MySQL 如何实现级联同步，并说明应用场景？
+MySQL 主从复制故障如何解决？
+Mysql 中有哪几种锁？
+Mysql 中有哪些不同的表格？
+简述在 MySQL 数据库中 MyISAM 和 InnoDB 的区别
+Mysql 中 InnoDB 支持的四种事务隔离级别名称，以及逐级之间的区别？
+CHAR 和 VARCHAR 的区别
+主键和候选键有什么区别？
+myisamchk 是用来做什么的？
+MyISAM Static 和 MyISAM Dynamic 有什么区别？
+如果一个表有一列定义为 TIMESTAMP，将发生什么？
+怎样才能找出最后一次插入时分配了哪个自动增量？
+
+
+
+
+
+
+
+========================================================================================================================
+为查询缓存优化你的查询
+EXPLAIN 你的 SELECT 查询
+当只要一行数据时使用 LIMIT 1
+为搜索字段建索引
+在 Join 表的时候使用相当类型的例，并将其索引
+千万不要 ORDER BY RAND()
+避免 SELECT *
+永远为每张表设置一个 ID
+使用 ENUM 而不是 VARCHAR
+从 PROCEDURE ANALYSE() 取得建议
+尽可能的使用 NOT NULL
+Prepared Statements
+无缓冲的查询
+把 IP 地址存成 UNSIGNED INT
+固定长度的表会更快
+垂直分割
+拆分大的 DELETE 或 INSERT 语句
+越小的列会越快
+选择正确的存储引擎
+使用一个对象关系映射器(Object Relational Mapper)
+小心“永久链接”

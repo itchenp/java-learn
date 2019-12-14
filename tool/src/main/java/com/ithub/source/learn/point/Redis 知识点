@@ -1,0 +1,14 @@
+redis简介
+为什么要用redis /为什么要用缓存
+为什么要用redis而不用map/guava做缓存？
+redis和memcached的区别
+redis常见数据结构以及使用场景分析
+redis设置过期时间
+redis 内存淘汰机制（MySQL里有2000w数据，Redis中只存20w的数据，如何保证Redis中的数据都是热点数据？）
+redis 持久化机制（怎么保证 redis 挂掉之后再重启数据可以进行恢复）
+redis事务
+Redis常见异常及解决方案
+分布式环境下常见的应用场景
+Redis集群模式
+如何解决Redis的并发竞争Key问题
+如何保证缓存与数据库双写时的数据一致性？
