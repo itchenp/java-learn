@@ -1,0 +1,30 @@
+什么是Spring框架？Spring框架有哪些主要模块？
+使用Spring框架能带来哪些好处？
+什么是控制反转(IOC)?什么是依赖注入？
+请解释下Spring框架中的loC？
+BeanFactory和ApplicationContext有什么区别？
+Spring有几种配置方式？
+如何用基于XML配置的方式配置Spring？
+如何用基于Java配置的方式配置Spring？
+容器中bean的配置方式
+bean属性的配置细节（字面值 & ref & 内部bean等）
+XML 配置里的 Bean 自动装配
+XML 配置里的 Bean 自动装配的缺点
+继承 Bean 配置
+依赖 Bean 配置
+bean 的作用域：singleton；prototype；WEB 环境作用域
+使用外部属性文件
+Spring表达式语言：SpEL
+IOC 容器中 Bean 的生命周期
+通过工厂方法配置bean
+实现 FactoryBean 接口在 Spring IOC 容器中配置 Bean
+什么是Spring MVC？
+Spring MVC的优点
+Spring MVC 工作原理
+Spring MVC 流程
+SpringMVC的控制器是不是单例模式，如果是，有什么问题，怎么解决？
+如果你也用过struts2.简单介绍下springMVC和struts2的区别有哪些？
+SpingMvc中的控制器的注解一般用那个，有没有别的注解可以替代？
+@RequestMapping注解用在类上面有什么作用？
+怎么样把某个请求映射到特定的方法上面？
+如果在拦截请求中，我想拦截get方式提交的方法，怎么配置？

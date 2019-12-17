@@ -1,5 +1,6 @@
-###### 拉取远程项目
+- 拉取远程项目
 git clone git地址(https或者git 开头，两者互相切换)
+<<<<<<< HEAD
 ###### 拉取远程项目到本地切换新分支
 git checkout -b 本地分支 origin/<branchname>
 ###### 查看git项目地址
@@ -27,3 +28,4 @@ git fetch origin 远程分支名称:新分支名称
 git config --list
 ###### 查看修改项
 git status
+

@@ -1,0 +1,40 @@
+junit用法，before，beforeClass，after，afterClass的执行顺序
+分布式锁
+nginx的请求转发算法，如何配置根据权重转发
+用hashmap实现redis有什么问题（死锁，死循环，可用ConcurrentHashmap）
+线程的状态
+线程的阻塞的方式
+sleep和wait的区别
+hashmap的底层实现
+一万个人抢100个红包，如何实现（不用队列），如何保证2个人不能抢到同一个红包，可用分布式锁
+Java内存模型，垃圾回收机制，不可达算法
+两个Integer的引用对象传给一个swap方法在方法内部交换引用，返回后，两个引用的值是否会发现变化
+AOP的底层实现，动态代理是如何动态，假如有100个对象，如何动态的为这100个对象代理？
+是否用过maven install、 maven test、git（make install是安装本地jar包）
+Tomcat的各种配置，如何配置docBase
+Spring的bean配置的几种方式
+Web.xml的配置
+Spring的监听器。
+Zookeeper的实现机制，有缓存，如何存储注册服务的
+IO会阻塞吗？readLine是不是阻塞的
+用过 Spring的线程池还是java的线程池？
+字符串的格式化方法 （20，21这两个问题问的太低级了）
+时间的格式化方法
+定时器用什么做的
+线程如何退出结束
+java有哪些锁？乐观锁 悲观锁 synchronized 可重入锁 读写锁,用过reentrantlock吗？reentrantlock与synmchronized的区别
+ThreadLocal的使用场景
+Java的内存模型，垃圾回收机制
+为什么线程执行要调用start而不是直接run（直接run，跟普通方法没什么区别，先调start，run才会作为一个线程方法运行）
+qmq消息的实现机制(qmq是去哪儿网自己封装的消息队列)
+遍历hashmap的三种方式
+JVM的一些命令
+memcache和redis的区别
+Mysql的行级锁加在哪个位置
+ConcurrentHashmap的锁是如何加的？是不是分段越多越好
+myisam和innodb的区别（innodb是行级锁，myisam是表级锁）
+MySQL其他的性能优化方式
+Linux系统日志在哪里看
+如何查看网络进程？
+统计一个整数的二进制表示中bit为1的个数
+JVM内存模型，java内存模型
