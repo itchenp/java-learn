@@ -1,6 +1,9 @@
 package com.ithub.source.learn.api.quick.start;
 
-import com.rabbitmq.client.*;
+import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.Connection;
+import com.rabbitmq.client.ConnectionFactory;
+import com.rabbitmq.client.QueueingConsumer;
 
 public class Consumer {
 
@@ -10,7 +13,7 @@ public class Consumer {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         connectionFactory.setHost("192.168.23.128");
         connectionFactory.setPort(5672);
-        connectionFactory.setVirtualHost("/");
+        connectionFactory.setVirtualHost("testmq");
 
         //2 通过连接工厂创建连接
         Connection connection = connectionFactory.newConnection();

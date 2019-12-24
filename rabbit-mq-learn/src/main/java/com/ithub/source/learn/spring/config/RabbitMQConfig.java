@@ -13,11 +13,14 @@ import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
 import org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter;
 import org.springframework.amqp.support.ConsumerTagStrategy;
 import org.springframework.amqp.support.converter.ContentTypeDelegatingMessageConverter;
+import org.springframework.amqp.support.converter.DefaultJackson2JavaTypeMapper;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 @Configuration
@@ -27,10 +30,9 @@ public class RabbitMQConfig {
 	@Bean
 	public ConnectionFactory connectionFactory(){
 		CachingConnectionFactory connectionFactory = new CachingConnectionFactory();
-		connectionFactory.setAddresses("192.180.70.118");
-		connectionFactory.setPort(5672);
-		connectionFactory.setUsername("guest");
-		connectionFactory.setPassword("guest");
+		connectionFactory.setAddresses("192.180.70.118:5672");
+//		connectionFactory.setUsername("guest");
+//		connectionFactory.setPassword("guest");
 		connectionFactory.setVirtualHost("testmq");
 		return connectionFactory;
 	}
@@ -157,7 +159,7 @@ public class RabbitMQConfig {
     	*/
     	
         // 1.1 支持json格式的转换器
-
+		/**
         MessageListenerAdapter adapter = new MessageListenerAdapter(new MessageDelegate());
         adapter.setDefaultListenerMethod("consumeMessage");
         
@@ -165,12 +167,13 @@ public class RabbitMQConfig {
         adapter.setMessageConverter(jackson2JsonMessageConverter);
         
         container.setMessageListener(adapter);
+		 */
 
     	
         
         
         // 1.2 DefaultJackson2JavaTypeMapper & Jackson2JsonMessageConverter 支持java对象转换
-        /**
+	/*
         MessageListenerAdapter adapter = new MessageListenerAdapter(new MessageDelegate());
         adapter.setDefaultListenerMethod("consumeMessage");
         
@@ -181,30 +184,30 @@ public class RabbitMQConfig {
         
         adapter.setMessageConverter(jackson2JsonMessageConverter);
         container.setMessageListener(adapter);
-        */
+*/
         
         
         //1.3 DefaultJackson2JavaTypeMapper & Jackson2JsonMessageConverter 支持java对象多映射转换
-        /**
+
         MessageListenerAdapter adapter = new MessageListenerAdapter(new MessageDelegate());
         adapter.setDefaultListenerMethod("consumeMessage");
         Jackson2JsonMessageConverter jackson2JsonMessageConverter = new Jackson2JsonMessageConverter();
         DefaultJackson2JavaTypeMapper javaTypeMapper = new DefaultJackson2JavaTypeMapper();
         
         Map<String, Class<?>> idClassMapping = new HashMap<String, Class<?>>();
-		idClassMapping.put("order", com.bfxy.spring.entity.Order.class);
-		idClassMapping.put("packaged", com.bfxy.spring.entity.Packaged.class);
+		idClassMapping.put("order", com.ithub.source.learn.spring.entity.Order.class);
+		idClassMapping.put("packaged", com.ithub.source.learn.spring.entity.Packaged.class);
 		
 		javaTypeMapper.setIdClassMapping(idClassMapping);
 		
 		jackson2JsonMessageConverter.setJavaTypeMapper(javaTypeMapper);
         adapter.setMessageConverter(jackson2JsonMessageConverter);
         container.setMessageListener(adapter);
-        */
-        
+
+
         //1.4 ext convert
-        /**
-        MessageListenerAdapter adapter = new MessageListenerAdapter(new MessageDelegate());
+
+        /*MessageListenerAdapter adapter = new MessageListenerAdapter(new MessageDelegate());
         adapter.setDefaultListenerMethod("consumeMessage");
         
         //全局的转换器:
@@ -229,9 +232,8 @@ public class RabbitMQConfig {
         
 		
 		adapter.setMessageConverter(convert);
-		container.setMessageListener(adapter);
-		 */
-		
+		container.setMessageListener(adapter);*/
+
     	return container;
     	
     }

@@ -1,4 +1,4 @@
-package com.ithub.source.learn.spring;
+package com.ithub.source.learn.spring.test;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -28,7 +28,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class RabbitMQApplicationTests {
+public class SpringRabbitMQApplicationTests {
 
 	@Test
 	public void contextLoads() {
@@ -196,14 +196,14 @@ public class RabbitMQApplicationTests {
 	
 	@Test
 	public void testSendExtConverterMessage() throws Exception {
-//			byte[] body = Files.readAllBytes(Paths.get("d:/002_books", "picture.png"));
+//			byte[] body = Files.readAllBytes(Paths.get("u:/temp/temp", "logo.png"));
 //			MessageProperties messageProperties = new MessageProperties();
 //			messageProperties.setContentType("image/png");
 //			messageProperties.getHeaders().put("extName", "png");
 //			Message message = new Message(body, messageProperties);
 //			rabbitTemplate.send("", "image_queue", message);
 		
-			byte[] body = Files.readAllBytes(Paths.get("d:/002_books", "mysql.pdf"));
+			byte[] body = Files.readAllBytes(Paths.get("u:/temp/temp", "阿里巴巴Java开发手册（公开版）.pdf"));
 			MessageProperties messageProperties = new MessageProperties();
 			messageProperties.setContentType("application/pdf");
 			Message message = new Message(body, messageProperties);

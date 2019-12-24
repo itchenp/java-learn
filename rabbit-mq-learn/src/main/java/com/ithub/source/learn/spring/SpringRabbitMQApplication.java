@@ -5,7 +5,7 @@
  * Time:     2019-12-20 16:02
  * Description:
  */
-package com.ithub.source.learn;
+package com.ithub.source.learn.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,9 +18,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 1.0.0
  */
 @SpringBootApplication
-public class RabbitMQApplication {
+public class SpringRabbitMQApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RabbitMQApplication.class);
+        SpringApplication.run(SpringRabbitMQApplication.class);
     }
 }

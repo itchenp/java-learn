@@ -46,16 +46,18 @@ import java.util.*;
 public class CombinationTwo {
 
     public static void main(String[] args) {
-        String[] m = {"T"};
-        Set<Set<String>> combinationAll = combination(m);
-        System.out.println(combinationAll);
-
-        for (Set<String> inerSet : combinationAll) {
-            System.out.println(inerSet.iterator().next());
-        }
+//        String[] m = {"T1","10001","QUICKPASS_DEBIT"};
+//        Set<Set<String>> combinationAll = combination(m);
+//        System.out.println(combinationAll);
+//
+//        for (Set<String> inerSet : combinationAll) {
+//            System.out.println(inerSet.iterator().next());
+//        }
 
         List<String> list = new ArrayList();
-        list.add("T");
+        list.add("T1");
+        list.add("QUICKPASS_DEBIT");
+        list.add("10001");
         Set<Set<String>> combination = combination(list.toArray(new String[list.size()]));
         System.out.println(combination);
 
