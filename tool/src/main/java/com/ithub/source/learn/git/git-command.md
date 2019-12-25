@@ -25,7 +25,7 @@ git reflog --date=local | grep <branchname>
 ###### 远程拉取新分支
 git fetch origin 远程分支名称:新分支名称
 ###### 查看配置
-git config --list
+git com.ithub.source.learn.spring.config --list
 ###### 查看修改项
 git status
 

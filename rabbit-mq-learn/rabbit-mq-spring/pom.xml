@@ -3,14 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>learn</artifactId>
+        <artifactId>rabbit-mq-learn</artifactId>
         <groupId>com.ithub</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>java-source-learn</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>rabbit-mq-spring</artifactId>
 
-    <description>java 源码，类知识学习</description>
+
 </project>
