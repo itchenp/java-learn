@@ -8,6 +8,7 @@
         <module>tool</module>
         <module>spring-source-learn</module>
         <module>rabbit-mq-learn</module>
+        <module>algorithms</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
