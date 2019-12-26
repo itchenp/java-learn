@@ -127,7 +127,7 @@ public class RabbitMQConfig {
 			}
 		});
     	/**
-    	container.setMessageListener(new ChannelAwareMessageListener() {
+    	container.setMessageListener(new ChannelAwareMessageListener() {`
 			@Override
 			public void onMessage(Message message, Channel channel) throws Exception {
 				String msg = new String(message.getBody());

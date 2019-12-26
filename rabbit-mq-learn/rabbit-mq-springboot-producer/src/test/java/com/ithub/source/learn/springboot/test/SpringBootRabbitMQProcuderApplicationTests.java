@@ -39,11 +39,14 @@ public class SpringBootRabbitMQProcuderApplicationTests {
 
     @Test
     public void testSend1() throws Exception {
-        Map<String,Object> properties = new HashMap<>();
-        properties.put("number","12345");
-        properties.put("send_time",simpleDateFormat.format(new Date()));
+        for (int i = 0; i < 10; i++) {
+            Map<String,Object> properties = new HashMap<>();
+            properties.put("number","12345"+i);
+            properties.put("send_time",simpleDateFormat.format(new Date()));
 
-        rabbitMQSender.send("Hello RabbitMQ For Spring boot",properties);
+            rabbitMQSender.send("Hello RabbitMQ For Spring boot",properties);
+        }
+
 
     }
 

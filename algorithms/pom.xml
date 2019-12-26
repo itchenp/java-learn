@@ -11,5 +11,9 @@
 
     <artifactId>algorithms</artifactId>
 
+    <description>
+        url :https://github.com/TheAlgorithms/Java
+        the codes clone from https://github.com/TheAlgorithms/Java.git
+    </description>
 
 </project>

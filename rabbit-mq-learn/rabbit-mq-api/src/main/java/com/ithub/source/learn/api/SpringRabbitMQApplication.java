@@ -5,7 +5,7 @@
  * Time:     2019-12-20 16:02
  * Description:
  */
-package api;
+package com.ithub.source.learn.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

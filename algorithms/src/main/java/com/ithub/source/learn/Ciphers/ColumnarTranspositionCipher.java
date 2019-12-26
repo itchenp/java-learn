@@ -1,4 +1,4 @@
-package com.ithub.source.learn.ciphers;
+package com.ithub.source.learn.Ciphers;
 
 /**
  * Columnar Transposition Cipher Encryption and Decryption.

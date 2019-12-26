@@ -1,4 +1,4 @@
-package com.ithub.source.learn.ciphers;
+package com.ithub.source.learn.Ciphers;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;

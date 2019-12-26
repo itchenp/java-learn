@@ -1,4 +1,4 @@
-package com.ithub.source.learn.divideconquer;
+package com.ithub.source.learn.Divideconquer;
 
 /**
  * For a set of points in a coordinates system (10000 maximum),
@@ -328,8 +328,6 @@ public final class ClosestPair {
      * main function: execute class.
      *
      * @param args (IN Parameter) <br/>
-     * @throws IOException If an input or output
-     *                     exception occurred
      */
 
     public static void main(final String[] args) {

@@ -1,4 +1,4 @@
-package api.quick.start;
+package com.ithub.source.learn.api.quick.start;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;

@@ -1,4 +1,4 @@
-package com.ithub.source.learn.divideconquer;
+package com.ithub.source.learn.Divideconquer;
 
 import java.util.ArrayList;
 import java.util.Comparator;
