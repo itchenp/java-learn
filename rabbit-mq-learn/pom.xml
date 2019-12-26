@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0</version>
     <modules>
-        <module>rabbit-mq-com.ithub.source.learn.api</module>
+        <module>rabbit-mq-api</module>
         <module>rabbit-mq-spring</module>
         <module>rabbit-mq-springboot-producer</module>
         <module>rabbit-mq-springboot-consumer</module>
