@@ -40,11 +40,11 @@ public class Consumer4DirectExchange {
         //参数：队列名称、是否自动ACK、Consumer
         channel.basicConsume(queueName, true, consumer);  
         //循环获取消息  
-        while(true){  
+        while(true){
             //获取消息，如果没有消息，这一步将会一直阻塞  
             Delivery delivery = consumer.nextDelivery();  
             String msg = new String(delivery.getBody());    
             System.out.println("收到消息：" + msg);  
-        } 
+        }
 	}
 }
