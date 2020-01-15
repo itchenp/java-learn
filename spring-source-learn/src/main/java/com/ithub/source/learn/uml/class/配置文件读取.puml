@@ -1,0 +1,31 @@
+@startuml
+
+interface ResourceLoader
+note right of ResourceLoader:定义资源加载器，\n主要应用于根据给定的资源文件地址返回对应的Resouce
+interface BeanDefinitionReader
+note right of BeanDefinitionReader:主要定义资源文件读取并转换为BeanDefinition的各个功能
+interface EnvironmentCapable
+note right of EnvironmentCapable:定义获取Environment方法
+interface DocumentLoader
+note right of DocumentLoader:定义从资源文件加载到转换为Document的功能
+abstract class AbstractBeanDefinitionReader
+interface BeanDefinitionDocumentReader
+note right of BeanDefinitionDocumentReader:定义读取Document并注册BeanDefinition功能
+class BeanDefinitionParserDelegate
+note right of BeanDefinitionParserDelegate: 定义解析Element的各种方法
+class XmlBeanDefinitionReader
+class DefaultBeanDefinitionDocumentReader
+
+XmlBeanDefinitionReader --|> AbstractBeanDefinitionReader
+
+AbstractBeanDefinitionReader ..|> BeanDefinitionReader
+AbstractBeanDefinitionReader ..|> EnvironmentCapable
+
+DefaultBeanDefinitionDocumentReader ..|> BeanDefinitionDocumentReader
+
+
+
+
+
+
+@enduml

@@ -37,3 +37,12 @@ git reset --soft commit的hash值 （推荐使用这个）
 
 git reset commit的hash值
 不带参数，也就是mixed模式。将会保留工作目录，并且把工作区，暂存区以及与reset的差异都放到工作区，然后清空暂存区。因此执行后，只要有所差异，文件都会变成红色，变得难以区分。
+
+###### 错误问题
+1.
+    $git push origin dev
+    fatal: remote error:
+    You can't push to git://github.com//name_of_repo.git
+    Use https:://github.com//name_of_repo.git
+
+解决方法: git remote set-url origin <THE-URL-HERE>   

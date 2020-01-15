@@ -10,6 +10,7 @@
         <module>rabbit-mq-learn</module>
         <module>algorithms</module>
         <module>drools</module>
+        <module>business</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
