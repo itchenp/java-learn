@@ -1,0 +1,74 @@
+@startuml
+
+interface AliasRegistry
+note right of AliasRegistry:定义对alias的简单增删改等操作
+class SimpleAliasRegistry
+note right of SimpleAliasRegistry:主要使用map作为alias的缓存,\n 并对接口AliasRegistry进行实现
+interface SingletonBeanRegistry
+note right of SingletonBeanRegistry:定义对单例的注册及获取
+interface BeanFactory
+note right of BeanFactory:定义获取bean及bean的各种属性
+class DefaultSingletonBeanRegistry
+note right of DefaultSingletonBeanRegistry:对接口SingletonBeanRegistry各函数的实现
+interface HierarchicalBeanFactory
+note right of HierarchicalBeanFactory:在BeanFactory基础商增加了对parentFactory的支持
+interface BeanDefinitionRegistry
+note right of BeanDefinitionRegistry:定义对BeanDefinition的各种增删改操作
+abstract class FactoryBeanRegistrySupport
+note right of FactoryBeanRegistrySupport:在DefaultSingletonBeanRegistry基础上\n增加对FactoryBean的特殊处理功能
+interface ConfigurableBeanFactory
+note right of ConfigurableBeanFactory:提供配置Factory的各种方法
+interface ListableBeanFactory
+note right of ListableBeanFactory:根据各种条件获取bean的配置清单
+class AbstractBeanFactory
+note right of AbstractBeanFactory:综合FactoryBeanRegistrySupport和ConfigurableBeanFactory的功能
+interface AutowireCapableBeanFactory
+note right of AutowireCapableBeanFactory:提供创建bean、自动注入、初始化以及应用bean的后处理器
+abstract class AbstractAutowireCapableBeanFactory
+note right of AbstractAutowireCapableBeanFactory:综合AbstractBeanFactory并对接口Autowire CapableBeanFactory进行实现
+interface ConfigurableListableBeanFactory
+note right of ConfigurableListableBeanFactory:BeanFactory配置清单，指定忽略类型及接口等
+class DefaultListableBeanFactory
+note top of DefaultListableBeanFactory:综合上面所有功能，主要是对bean注册后的处理
+
+
+DefaultListableBeanFactory --|> AbstractAutowireCapableBeanFactory
+
+AbstractAutowireCapableBeanFactory --|> AbstractBeanFactory
+AbstractAutowireCapableBeanFactory ..|> AutowireCapableBeanFactory
+
+AbstractBeanFactory --|> FactoryBeanRegistrySupport
+AbstractBeanFactory ..|> ConfigurableBeanFactory
+
+FactoryBeanRegistrySupport --|> DefaultSingletonBeanRegistry
+
+DefaultSingletonBeanRegistry --|> SimpleAliasRegistry
+DefaultSingletonBeanRegistry ..|> SingletonBeanRegistry
+
+SimpleAliasRegistry ..|> AliasRegistry
+
+ConfigurableBeanFactory --|> HierarchicalBeanFactory
+ConfigurableBeanFactory --|> SingletonBeanRegistry
+
+HierarchicalBeanFactory --|> BeanFactory
+
+DefaultListableBeanFactory ..|> ConfigurableListableBeanFactory
+DefaultListableBeanFactory ..|> BeanDefinitionRegistry
+
+AutowireCapableBeanFactory --|> BeanFactory
+
+ConfigurableListableBeanFactory --|> ListableBeanFactory
+ConfigurableListableBeanFactory --|> AutowireCapableBeanFactory
+ConfigurableListableBeanFactory --|> ConfigurableBeanFactory
+
+ListableBeanFactory --|> BeanFactory
+
+BeanDefinitionRegistry --|> AliasRegistry
+
+
+
+
+
+
+
+@enduml

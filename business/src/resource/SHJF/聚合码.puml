@@ -1,0 +1,61 @@
+@startuml
+
+title 聚合码牌
+
+actor 用户 as U
+
+database 数据库 as D #red
+
+== 码牌生成start ==
+
+内管理台 -[#blue]> 码牌服务: 调用码牌生成
+
+activate 码牌服务
+
+码牌服务 -[#orange]> D: 查询码牌生成序列
+
+note over 码牌服务
+
+码牌前两位采用系统对
+各个机构分配的编码;
+根据序列，
+采用34位进制转换，
+生成码牌后6位
+
+end note
+
+
+
+码牌服务 -[#red]> D : 保存码牌
+
+== 码牌生成over ==
+
+== 扫码start ==
+
+U -[#blue]> 码牌前置:用户扫码
+activate 码牌前置
+码牌前置 -[#blue]> 码牌服务:发送码牌参数rsq，校验码牌
+deactivate 码牌前置
+
+码牌服务 -[#orange]> D : 查询码牌信息
+
+note over 码牌服务
+校验码牌信息
+end note
+
+码牌服务 -[#orange]> D : 查询码牌绑定信息
+码牌服务 -[#orange]> D : 查询商户信息
+note over 码牌服务
+校验商户
+end note
+
+码牌服务 -[#blue]> 码牌前置:返回商户简称，经纬度等信息
+deactivate 码牌服务
+
+== 扫码over ==
+
+
+
+database 数据库 as D #red
+
+@enduml

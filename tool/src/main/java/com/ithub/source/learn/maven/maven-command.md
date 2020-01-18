@@ -18,5 +18,5 @@ mvn dependency:analyze -pl "service/[模块名]" -Plocal
 mvn -pl "!service/[模块名]" install -Dmaven.test.skip=true -Plocal
 ###### 上传包到本地服务器
 mvn install:install-file -Dfile=[本地包路径] -DgroupId=com.jfpal -DartifactId=agent-base -Dversion=1.0.0 -Dpackaging=jar
-
->>>>>>> feature-java-jf-pc
+###### 分析
+mvn dependency:tree -Dverbose

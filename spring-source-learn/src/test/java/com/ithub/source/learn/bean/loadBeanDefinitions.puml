@@ -1,0 +1,28 @@
+@startuml
+
+XmlBeanFactory -> XmlBeanDefinitionReader:1:loadBeanDefinitions(resource)
+activate XmlBeanDefinitionReader
+XmlBeanDefinitionReader -> EncodedResource:1.1:new EncodedResource(resource)
+activate EncodedResource
+EncodedResource -> XmlBeanDefinitionReader:1.2:EncodedResource
+deactivate EncodedResource
+XmlBeanDefinitionReader -> XmlBeanDefinitionReader:1.3:loadBeanDefinitions(encodedResource)
+
+XmlBeanDefinitionReader -> EncodedResource:1.3.1:encodedResource.getResource()
+activate EncodedResource
+EncodedResource -> XmlBeanDefinitionReader:1.3.2:Resource
+deactivate EncodedResource
+
+XmlBeanDefinitionReader -> Resource:1.3.3:getInputStream()
+activate Resource
+Resource -> XmlBeanDefinitionReader:1.3.4:InputStream
+deactivate Resource
+XmlBeanDefinitionReader -> InputStreamSource:1.3.5:new InputSource(inputStream)
+activate InputStreamSource
+InputStreamSource -> XmlBeanDefinitionReader:1.3.6:InputSource
+deactivate InputStreamSource
+XmlBeanDefinitionReader -> XmlBeanDefinitionReader:1.4:doLoadBeanDefinitions(inputSource, encodedResource.getResource())
+
+XmlBeanDefinitionReader -> XmlBeanFactory:2
+deactivate XmlBeanDefinitionReader
+@enduml
