@@ -34,4 +34,26 @@ public class TestOne {
 
         System.out.println(i);
     }
+
+    @Test
+    public void test05(){
+//        for (int i = 1; i < 7482;) {
+//            // =PHONETIC(C1:D100)
+//            System.out.println("=PHONETIC(C"+(i)+":D"+(i+99)+")");
+//            i = i +100;
+//        }
+
+        for (int i = 1; i < 75; i++) {
+            System.out.println(i);
+        }
+    }
+
+    @Test
+    public void test06(){
+        String name = "${AB}";
+        System.out.println(
+                name.length()
+        );
+    }
+    
 }
