@@ -43,4 +43,7 @@ git reset commit的hash值
     You can't push to git://github.com//name_of_repo.git
     Use https:://github.com//name_of_repo.git
 
-解决方法: git remote set-url origin <THE-URL-HERE>   
+解决方法: git remote set-url origin <THE-URL-HERE>
+
+##### git添加sshkey
+ssh-keygen -t RSA -C "itchenp@gmail.com"
