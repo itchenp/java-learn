@@ -15,3 +15,7 @@ if [ -z "$CATALINA_OUT" ] ; then
   CATALINA_OUT="$CATALINA_BASE"/logs/catalina.%Y-%m-%d.out
 fi
 
+
+## zip命令
+压缩：zip -r filename.zip filesdir
+解压缩：unzip filename.zip

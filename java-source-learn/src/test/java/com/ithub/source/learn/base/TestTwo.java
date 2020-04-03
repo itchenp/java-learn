@@ -55,4 +55,15 @@ public class TestTwo {
 
     }
 
+    @Test
+    public void test06(){
+
+
+        if(1==1 && 1==2){
+            System.out.println("1");
+        }else if(1==1 && 1==3){
+            System.out.println(2);
+        }
+    }
+
 }
