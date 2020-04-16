@@ -1,7 +1,7 @@
 package com.ithub.source.learn.Sorts;
 
-import static Sorts.SortUtils.less;
-import static Sorts.SortUtils.print;
+import static com.ithub.source.learn.Sorts.SortUtils.less;
+import static com.ithub.source.learn.Sorts.SortUtils.print;
 
 /**
  * @author Podshivalov Nikita (https://github.com/nikitap492)

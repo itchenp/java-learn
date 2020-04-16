@@ -1,6 +1,6 @@
 package com.ithub.source.learn.Sorts;
 
-import static Sorts.SortUtils.*;
+import static com.ithub.source.learn.Sorts.SortUtils.*;
 
 
 /**

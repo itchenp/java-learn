@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toMap;
-import static Sorts.SortUtils.print;
+import static com.ithub.source.learn.Sorts.SortUtils.print;
 
 /**
  * @author Youssef Ali (https://github.com/youssefAli11997)

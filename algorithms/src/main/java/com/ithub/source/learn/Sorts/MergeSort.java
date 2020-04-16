@@ -1,6 +1,6 @@
 package com.ithub.source.learn.Sorts;
 
-import static Sorts.SortUtils.print;
+import static com.ithub.source.learn.Sorts.SortUtils.print;
 
 /**
  * This method implements the Generic Merge Sort

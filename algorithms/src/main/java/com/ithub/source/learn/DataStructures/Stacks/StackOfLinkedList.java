@@ -1,5 +1,7 @@
 package com.ithub.source.learn.DataStructures.Stacks;
 
+import java.util.NoSuchElementException;
+
 /**
  * @author Varun Upadhyay (https://github.com/varunu28)
  */
