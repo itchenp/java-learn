@@ -13,4 +13,14 @@
     <packaging>pom</packaging>
 
     <description>java 源码，类知识学习</description>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.openjdk.jol/jol-core -->
+        <dependency>
+            <groupId>org.openjdk.jol</groupId>
+            <artifactId>jol-core</artifactId>
+            <version>0.9</version>
+        </dependency>
+
+    </dependencies>
 </project>

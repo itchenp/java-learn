@@ -52,4 +52,9 @@ public class TestThree {
 
 //        System.out.println(Arrays.toString(s1));
     }
+
+    @Test
+    public void test05(){
+        System.out.println(Double.parseDouble("5.2"));
+    }
 }
