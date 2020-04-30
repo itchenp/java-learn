@@ -2,6 +2,7 @@ package com.ithub.source.learn.base;
 
 import org.junit.Test;
 
+import java.math.BigDecimal;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -16,5 +17,12 @@ public class TestFour {
         Pattern p=Pattern.compile(patten);
         Matcher m=p.matcher(str);
         System.out.println(m.matches());
+    }
+
+    @Test
+    public void test02(){
+        BigDecimal one = new BigDecimal(-0.02);
+        BigDecimal two = new BigDecimal(0);
+        System.out.println(one.compareTo(two));
     }
 }
