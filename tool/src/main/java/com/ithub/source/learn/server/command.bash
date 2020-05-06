@@ -4,7 +4,7 @@ cat /dev/null > nohup.out
 echo '' > nohup.out
 
 ## grep 命令
-grep -n 'xxx' xxxx.log （-n）显示行号
+grep -n 'xxx' xxxx.log  (-n)显示行号
 
 ## tomcat 修改日志输出路径
 if [ -z "$CATALINA_OUT" ] ; then
@@ -17,5 +17,7 @@ fi
 
 
 ## zip命令
-压缩：zip -r filename.zip filesdir
-解压缩：unzip filename.zip
+压缩:zip -r filename.zip filesdir
+解压缩:unzip filename.zip
+
+端口查看:netstat -tunpl | grep 端口号

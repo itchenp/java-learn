@@ -11,6 +11,7 @@
         <module>algorithms</module>
         <module>drools</module>
         <module>business</module>
+        <module>books</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
