@@ -13,25 +13,6 @@
     <packaging>pom</packaging>
 
     <description>java 源码，类知识学习</description>
-<<<<<<< HEAD
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-=======
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.openjdk.jol/jol-core -->
@@ -40,7 +21,5 @@
             <artifactId>jol-core</artifactId>
             <version>0.9</version>
         </dependency>
-
->>>>>>> feature-java-jf-pc
     </dependencies>
 </project>
