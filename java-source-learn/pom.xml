@@ -14,10 +14,6 @@
 
     <description>java 源码，类知识学习</description>
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
         <dependency>
             <groupId>io.netty</groupId>
@@ -31,6 +27,5 @@
             <artifactId>jol-core</artifactId>
             <version>0.9</version>
         </dependency>
-
     </dependencies>
 </project>
