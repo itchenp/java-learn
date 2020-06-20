@@ -32,4 +32,8 @@ public class TestFour {
     public void test03(){
         List<String> list = Arrays.asList("a","ab","abc","abcd");
     }
+
+    public void test04(){
+
+    }
 }

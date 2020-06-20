@@ -11,6 +11,8 @@
 #### 删除远程分支
     git push origin :dev
     或者： git push origin --delete <branchname>
+#### 删除git仓库文件
+    git rm -r --cached "文件（文件夹/）"
 #### 创建新分支
     git checkout -b <branchname> : # (在当前分支下创建<branchname>的本地分支分支)
     git push origin <branchname> : # (将<branchname>分支推送到远程)
