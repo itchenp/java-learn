@@ -49,4 +49,4 @@
 ##### git添加sshkey
 ssh-keygen -t RSA -C "itchenp@gmail.com"
 =======
-    解决方法: git remote set-url origin <THE-URL-HERE>   
+    解决方法: git remote set-url origin <THE-URL-HERE>
