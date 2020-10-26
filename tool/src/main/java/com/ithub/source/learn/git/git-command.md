@@ -50,3 +50,7 @@
 ssh-keygen -t RSA -C "itchenp@gmail.com"
 =======
     解决方法: git remote set-url origin <THE-URL-HERE>
+    
+#### git 覆盖分支
+git reset --hard origin/paytest （当前分支使用paytest分支去覆盖）
+git push -f    
