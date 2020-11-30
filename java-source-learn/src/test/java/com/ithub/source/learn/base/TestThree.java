@@ -24,6 +24,10 @@ public class TestThree {
             System.out.println(s);
         }
         System.out.println(Arrays.toString(strs.split("\\|")));
+
+        strs = "";
+        System.out.println(strs.contains("|"));
+
     }
 
     @Test

@@ -1,4 +1,4 @@
-package com.ithub.source.learn.pseudo.sharing;
+package com.ithub.source.learn.jvm.sharing.pseudo;
 
 /**
  * 读取缓存 以cache line为基本单位 即64bytes

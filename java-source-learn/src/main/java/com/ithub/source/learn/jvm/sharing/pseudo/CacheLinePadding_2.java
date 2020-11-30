@@ -1,4 +1,4 @@
-package com.ithub.source.learn.pseudo.sharing;
+package com.ithub.source.learn.jvm.sharing.pseudo;
 
 public class CacheLinePadding_2 {
 
