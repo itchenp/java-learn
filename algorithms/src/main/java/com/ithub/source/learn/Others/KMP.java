@@ -7,8 +7,8 @@ package com.ithub.source.learn.Others;
 public class KMP {
     //a working example
     public static void main(String[] args) {
-        final String haystack = "AAAAABAAABA";        //This is the full string
-        final String needle = "AAAA";                //This is the substring that we want to find
+        final String haystack = "aaaabcde";        //This is the full string
+        final String needle = "aaaaax";                //This is the substring that we want to find
         KMPmatcher(haystack, needle);
     }
 
