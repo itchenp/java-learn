@@ -57,4 +57,11 @@ public class TestThree {
     public void test05(){
         System.out.println(Double.parseDouble("5.2"));
     }
+
+    @Test
+    public void test06(){
+        System.out.println(12&7);
+        System.out.println(12%8);
+        System.out.println(Integer.toHexString(0x01<<18));
+    }
 }
