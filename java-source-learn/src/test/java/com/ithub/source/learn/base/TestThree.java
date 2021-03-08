@@ -47,7 +47,10 @@ public class TestThree {
         String[] s1 = new String[]{"A","B","C","D","E","F"};
         String[] s2 = new String[]{"B","D","F"};
 
-        List<String> list = new ArrayList<String>(){{addAll(Arrays.asList(s1));}};
+        List<String> list = new ArrayList<String>(){
+            private static final long serialVersionUID = 9117191471280089989L;
+
+            {addAll(Arrays.asList(s1));}};
         System.out.println(list);
         list.remove("B");
 
@@ -67,5 +70,33 @@ public class TestThree {
         System.out.println(12&7);
         System.out.println(12%8);
         System.out.println(Integer.toHexString(0x01<<18));
+    }
+
+    @Test
+    public void test07(){
+        List<String> source = new ArrayList<String>(){
+            private static final long serialVersionUID = 6174488115174334052L;
+
+            {
+            add("A");add("B");add("C"); add("D");add("E");add("F");add("G");add("H"); add("I");add("J");
+        }};
+        System.out.println(source.toArray().getClass() == Object[].class);
+    }
+
+    public static void main(String[] args) {
+        List<String> argList = Arrays.asList(args);
+        System.out.println(argList.toArray());
+        System.out.println(argList.toArray(new Object[0]));
+    }
+
+    @Test
+    public void test08(){
+        Map<String,String> map = new HashMap<>(16);
+        map.put("Aa","a"); // Aa 与BB hash值一样
+        map.put("B","b");
+        map.put("C","c");
+        map.put("BB","a");
+
+        System.out.println(map);
     }
 }
