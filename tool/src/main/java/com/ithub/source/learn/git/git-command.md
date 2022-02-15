@@ -1,3 +1,40 @@
+#### git 本地配置
+    git config --global user.name "Linuxs"
+    git config --global user.email "itchenp@gmail.com"
+    
+    ssh-keygen -t rsa -C "itchenp@gmail.com"
+
+    多账户配置：
+        进入到 .ssh目录 ：  cd ~/.ssh
+        创建config文件：    touch config
+        编辑config文件：    vim config
+        
+        将底下这些拷贝到config里面
+    
+        #github
+        
+              Host github.com   
+        
+              HostName github.com
+        
+              IdentityFile ~/.ssh/id_rsa_github
+        
+              User Linuxs
+        
+        #codes
+        
+              Host codes.51jiawawa.com
+        
+              HostName codes.51jiawawa.com
+        
+              IdentityFile ~/.ssh/id_rsa
+        
+              User chenpeng
+        
+        最后执行：
+        ssh -T git@github.com
+        ssh -T git@codes.51jiawawa.com
+
 #### 拉取远程项目
     git clone git地址(https或者git 开头，两者互相切换)
 #### 拉取远程项目到本地切换新分支
@@ -41,16 +78,26 @@
 
 #### 错误问题
     $git push origin dev
-    fatal: remote error:
-    You can't push to git://github.com//name_of_repo.git
-    Use https:://github.com//name_of_repo.git
+        fatal: remote error:
+        You can't push to git://github.com//name_of_repo.git
+        Use https:://github.com//name_of_repo.git
+        
+        fatal: unable to access 'https://github.com/itchenp/java-learn.git/': OpenSSL SSL_read: Connection was reset, errno 10054
+        ======
+            解决方法：  git config --global http.sslVerify "false"
+        
+        fatal: unable to access 'https://github.com/itchenp/java-learn.git/': Failed to connect to github.com port 443: Timed out
+        ======
+            解决方法：   修改本地代理
+    
 
 
 ##### git添加sshkey
-ssh-keygen -t RSA -C "itchenp@gmail.com"
-=======
-    解决方法: git remote set-url origin <THE-URL-HERE>
+    ssh-keygen -t RSA -C "itchenp@gmail.com"
+    =======
+        解决方法: git remote set-url origin <THE-URL-HERE>
     
 #### git 覆盖分支
-git reset --hard origin/paytest （当前分支使用paytest分支去覆盖）
-git push -f    
+    git reset --hard origin/paytest （当前分支使用paytest分支去覆盖）
+    git push -f  
+
