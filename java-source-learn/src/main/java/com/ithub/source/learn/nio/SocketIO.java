@@ -24,7 +24,6 @@ public class SocketIO {
         BufferedReader reader = new BufferedReader(new InputStreamReader(in));
         System.out.println(reader.readLine());
 
-        while (true){
-        }
+
     }
 }

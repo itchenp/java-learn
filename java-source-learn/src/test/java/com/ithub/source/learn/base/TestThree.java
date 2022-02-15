@@ -1,5 +1,6 @@
 package com.ithub.source.learn.base;
 
+import net.minidev.json.JSONArray;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -60,5 +61,15 @@ public class TestThree {
     @Test
     public void test05(){
         System.out.println(Double.parseDouble("5.2"));
+    }
+
+
+    @Test
+    public void test06(){
+        List<String> list = new ArrayList<>();
+        list.add("A1");list.add("B1");list.add("C1");list.add("A2");list.add("B3");list.add("D1");
+        Collections.shuffle(list);
+        list = list.subList(0,3);
+        System.out.println(JSONArray.toJSONString(list));
     }
 }
