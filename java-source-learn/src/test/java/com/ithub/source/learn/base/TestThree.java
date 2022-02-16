@@ -71,5 +71,7 @@ public class TestThree {
         Collections.shuffle(list);
         list = list.subList(0,3);
         System.out.println(JSONArray.toJSONString(list));
+
+
     }
 }
