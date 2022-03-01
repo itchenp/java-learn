@@ -2,6 +2,8 @@ package com.ithub.source.learn.base;
 
 import org.junit.Test;
 
+import java.math.BigDecimal;
+import java.util.Calendar;
 import java.util.Random;
 
 /**
@@ -29,5 +31,18 @@ public class TestFive {
         System.out.println(a==b);
         System.out.println(b==c);
         System.out.println(a==c);
+    }
+
+    @Test
+    public void test03(){
+        int i = new BigDecimal("0.1").multiply(new BigDecimal(String.valueOf(1))).intValue();
+        System.out.println(i);
+    }
+
+    @Test
+    public void test04(){
+        Calendar instance = Calendar.getInstance();
+        System.out.println(instance.get(Calendar.DAY_OF_WEEK)==Calendar.MONDAY);
+        System.out.println(Calendar.TUESDAY);
     }
 }

@@ -100,4 +100,9 @@
 #### git 覆盖分支
     git reset --hard origin/paytest （当前分支使用paytest分支去覆盖）
     git push -f  
+    ======
+    git fetch --all
+    git reset --hard origin/master (这里master要修改为对应的分支名)
+    git pull
+    
 
