@@ -13,6 +13,6 @@ mvn dependency:analyze -pl "service/[模块名]" -Plocal
 ###### 编译排除指定模块
 mvn -pl "!service/[模块名]" install -Dmaven.test.skip=true -Plocal
 ###### 上传包到本地服务器
-mvn install:install-file -Dfile=[本地包路径] -DgroupId=com.jfpal -DartifactId=agent-base -Dversion=1.0.0 -Dpackaging=jar
+mvn install:install-file "-DgroupId=com.xtrendspeed" "-DartifactId=xtrendspeed-util" "-Dversion=1.0-SNAPSHOT" "-Dpackaging=jar" "-Dfile=D:\Downloads\xtrendspeed-util.jar"
 ###### 分析
 mvn dependency:tree -Dverbose
