@@ -104,5 +104,7 @@
     git fetch --all
     git reset --hard origin/master (这里master要修改为对应的分支名)
     git pull
+#### git pull 失效
+    git pull origin 远程分支名
     
 
