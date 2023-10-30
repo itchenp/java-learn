@@ -106,5 +106,14 @@
     git pull
 #### git pull 失效
     git pull origin 远程分支名
+#### git 回滚分支
+    git checkout the_branch
+    git pull
+    git branch the_branch_backup //备份一下这个分支当前的情况
+    git reset --hard the_commit_id //把the_branch本地回滚到the_commit_id
+    git push origin :the_branch //删除远程 the_branch
+    git push origin the_branch //用回滚后的本地分支重新建立远程分支
+    git push origin :the_branch_backup //如果前面都成功了，删除这个备份分支
+   
     
 
