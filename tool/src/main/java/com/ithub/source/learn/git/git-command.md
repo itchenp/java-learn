@@ -114,6 +114,14 @@
     git push origin :the_branch //删除远程 the_branch
     git push origin the_branch //用回滚后的本地分支重新建立远程分支
     git push origin :the_branch_backup //如果前面都成功了，删除这个备份分支
+#### git 分支太多，拉取代码失败
+    git clone --depth 1 远程地址 //浅层clone代码 depth 1只会拉取最后一次log， depth(后面数字越大拉取的历史记录越多)
+    git fetch --unshallow // 拉取完整分支
+    git branch -a
+    git remote set-branches origin '远程分支名称'
+    git fetch --depth 1 origin 远程分支名称
+    git checkout 远程分支名称
+    
    
     
 
