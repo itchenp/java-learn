@@ -121,6 +121,8 @@
     git remote set-branches origin '远程分支名称'
     git fetch --depth 1 origin 远程分支名称
     git checkout 远程分支名称
+#### git commit 备注修改    
+    git commit --amend --message="modify message by daodaotest"
     
    
     
