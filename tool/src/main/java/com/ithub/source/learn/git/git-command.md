@@ -123,6 +123,9 @@
     git checkout 远程分支名称
 #### git commit 备注修改    
     git commit --amend --message="modify message by daodaotest"
+#### git 显示所有远端分支
+    git remote set-branches origin '*'
+    git ls-remote origin
     
    
     
