@@ -126,7 +126,13 @@
 #### git 显示所有远端分支
     git remote set-branches origin '*'
     git ls-remote origin
-    
+
+    git config --global http.postBuffer 2147483647
+    git config --global core.compression 0
+    git fetch --unshallow
+
+
+    git config --show-origin --get-all http.postBuffer
    
     
 
